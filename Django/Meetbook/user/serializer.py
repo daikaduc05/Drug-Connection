@@ -13,3 +13,5 @@ class RegisterSerializer(serializers.Serializer):
         elif not re.match(rpassword,data['password']):
             raise serializers.ValidationError(WRONG_FORM_PASSWORD)
         return data
+
+    
