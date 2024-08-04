@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DrugConnection</title>
+    <link rel="stylesheet" href="home.css">
+    <!-- talwind -->
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="loading.css">
+    <link rel="shortcut icon" href="logo.jpg" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+</head>
+
+<body>
+    <!-- start loading -->
+    <div class="preloader">
+        <div class="loader">
+            <span class="item"></span>
+            <span class="item"></span>
+            <span class="item"></span>
+            <span class="item"></span>
+        </div>
+    </div>
+    <div class="layer"></div>
+    <!-- end loading -->
+    <!-- start menu -->
+    <div class="menu">
+        <div class="logo">
+            <a href="home.html">DrugConnection</a>
+        </div>
+        <ul>
+            <a href="home.html">
+                <li>
+                    <i class="fas fa-home"></i>
+                    <span>Home</span>
+                </li>
+            </a>
+            <!-- <a href="#">
+                <li>
+                    <i class="" aria-hidden="true"></i>
+                    <span>Search</span>
+                </li>
+            </a> -->
+            <a href="#">
+                <li>
+                    <i class="fas fa-envelope"></i>
+                    <span>Messages</span>
+                </li>
+            </a>
+            <a href="#" id="dot-red">
+                <li>
+                    <div class="dot-red"></div>
+                    <i class="fas fa-bell"></i>
+                    <span>Notifications</span>
+                </li>
+            </a>
+            <a href="#">
+                <li>
+                    <i class="fas fa-plus-circle  "></i>
+                    <span>Create</span>
+                </li>
+            </a>
+            <a href="profile.html">
+                <li>
+                    <img src="https://i.pinimg.com/236x/9d/4a/49/9d4a49b2b2b9392d3f844c4dbcff52d6.jpg" alt="">
+                    <span>Profile</span>
+                </li>
+            </a>
+            <a href="#">
+                <li>
+                    <i class="fas fa-bars"></i>
+                    <span>More</span>
+                </li>
+            </a>
+        </ul>
+    </div>
+    <!-- end menu -->
+
+    <!-- start main -->
+    <div class="main">
+        <!-- start post -->
+        <div class="post">
+            <div class="searching">
+                <form class="form relative flex items-center">
+                    <button class="absolute left-2 p-1 flex items-center">
+                        <svg width="17" height="16" fill="none" xmlns="http://www.w3.org/2000/svg" role="img"
+                            aria-labelledby="search" class="w-5 h-5 text-gray-700">
+                            <path d="M7.667 12.667A5.333 5.333 0 107.667 2a5.333 5.333 0 000 10.667zM14.334 14l-2.9-2.9"
+                                stroke="currentColor" stroke-width="1.333" stroke-linecap="round"
+                                stroke-linejoin="round"></path>
+                        </svg>
+                    </button>
+                    <input
+                        class="input w-full rounded-full px-8 py-3 border-2 border-transparent border-black focus:outline-none focus:border-green-500 placeholder-gray-400 transition-all duration-300 shadow-md pl-12 "
+                        placeholder="Search..." required="" type="text" />
+                    <button type="reset" class="absolute right-3 p-1 flex items-center">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 text-gray-700" fill="none"
+                            viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"></path>
+                        </svg>
+                    </button>
+                </form>
+            </div>
+
+            <div class="post-user">
+                <div class="post-user1">
+                    <div class="in4">
+                        <a href="#"><img class="avatar"
+                                src="https://i.pinimg.com/236x/9d/4a/49/9d4a49b2b2b9392d3f844c4dbcff52d6.jpg"
+                                alt=""></a>
+                        <a href="#"><span class="name">hl_btoan</span></a>
+                        <span class="time">1d</span>
+                    </div>
+                    <div class="posts">
+                        <img src="https://i.pinimg.com/236x/11/6d/99/116d99c44902e7003a1f6731cb93d99d.jpg" alt="">
+                    </div>
+                    <div class="tym">
+                        <!-- start tym -->
+                        <div class="heart-container" title="Like">
+                            <input type="checkbox" class="checkbox" id="Give-It-An-Id">
+                            <div class="svg-container">
+                                <svg viewBox="0 0 24 24" class="svg-outline" xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M17.5,1.917a6.4,6.4,0,0,0-5.5,3.3,6.4,6.4,0,0,0-5.5-3.3A6.8,6.8,0,0,0,0,8.967c0,4.547,4.786,9.513,8.8,12.88a4.974,4.974,0,0,0,6.4,0C19.214,18.48,24,13.514,24,8.967A6.8,6.8,0,0,0,17.5,1.917Zm-3.585,18.4a2.973,2.973,0,0,1-3.83,0C4.947,16.006,2,11.87,2,8.967a4.8,4.8,0,0,1,4.5-5.05A4.8,4.8,0,0,1,11,8.967a1,1,0,0,0,2,0,4.8,4.8,0,0,1,4.5-5.05A4.8,4.8,0,0,1,22,8.967C22,11.87,19.053,16.006,13.915,20.313Z">
+                                    </path>
+                                </svg>
+                                <svg viewBox="0 0 24 24" class="svg-filled" xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M17.5,1.917a6.4,6.4,0,0,0-5.5,3.3,6.4,6.4,0,0,0-5.5-3.3A6.8,6.8,0,0,0,0,8.967c0,4.547,4.786,9.513,8.8,12.88a4.974,4.974,0,0,0,6.4,0C19.214,18.48,24,13.514,24,8.967A6.8,6.8,0,0,0,17.5,1.917Z">
+                                    </path>
+                                </svg>
+                                <svg class="svg-celebrate" width="100" height="100" xmlns="http://www.w3.org/2000/svg">
+                                    <polygon points="10,10 20,20"></polygon>
+                                    <polygon points="10,50 20,50"></polygon>
+                                    <polygon points="20,80 30,70"></polygon>
+                                    <polygon points="90,10 80,20"></polygon>
+                                    <polygon points="90,50 80,50"></polygon>
+                                    <polygon points="80,80 70,70"></polygon>
+                                </svg>
+                            </div>
+                        </div>
+                        <!-- end tym -->
+                        <span class="num">0 likes</span><!-- số lượt thả cảm xúc -->
+                        <div class="group relative">
+                            <svg stroke-linejoin="round" stroke-linecap="round" stroke="currentColor" stroke-width="2"
+                                viewBox="0 0 24 24" height="44" width="44" xmlns="http://www.w3.org/2000/svg"
+                                class="w-8 hover:scale-125 duration-200 hover:stroke-blue-500" fill="none">
+                                <path fill="none" d="M0 0h24v24H0z" stroke="none"></path>
+                                <path d="M8 9h8"></path>
+                                <path d="M8 13h6"></path>
+                                <path
+                                    d="M18 4a3 3 0 0 1 3 3v8a3 3 0 0 1 -3 3h-5l-5 3v-3h-2a3 3 0 0 1 -3 -3v-8a3 3 0 0 1 3 -3h12z">
+                                </path>
+                            </svg>
+                        </div>
+                        <span id="commentCount" class="num">0 comments</span><!-- số lượt comment -->
+                    </div>
+                    <!-- start comment -->
+                    <!-- start comment -->
+                    <div class="cmt">
+                        <div class="card">
+                            <div class="comments" id="comments"><!-- comment --></div>
+                            <hr>
+                            <div class="text-box">
+                                <div class="box-container">
+                                    <textarea id="commentTextarea" placeholder="Reply"></textarea>
+                                    <div>
+                                        <div class="formatting">
+                                            <button id="addComment" type="submit" class="send" title="Send">
+                                                <svg fill="none" viewBox="0 0 24 24" height="18" width="18"
+                                                    xmlns="http://www.w3.org/2000/svg">
+                                                    <path stroke-linejoin="round" stroke-linecap="round"
+                                                        stroke-width="2.5" stroke="#ffffff" d="M12 5L12 20"></path>
+                                                    <path stroke-linejoin="round" stroke-linecap="round"
+                                                        stroke-width="2.5" stroke="#ffffff"
+                                                        d="M7 9L11.2929 4.70711C11.6262 4.37377 11.7929 4.20711 12 4.20711C12.2071 4.20711 12.3738 4.37377 12.7071 4.70711L17 9">
+                                                    </path>
+                                                </svg>
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- end comment -->
+                </div>
+            </div>
+            
+
+        </div>
+        <!-- end post -->
+
+        <!-- start suggested -->
+        <div class="suggested">
+            <div class="top">
+                <a class="profile" href="#">
+                    <img class="profile" src="https://i.pinimg.com/236x/9d/4a/49/9d4a49b2b2b9392d3f844c4dbcff52d6.jpg"
+                        alt="">
+                </a>
+                <a class="name-account" href="#">
+                    <span class="name">hl_btoan</span>
+                </a>
+                <a class="switch" href="LogDrug.html">Switch</a>
+            </div>
+            <span class="text">Suggested for you</span>
+            <div class="bottom">
+                <!-- start đề xuất kết bạn -->
+                <div class="sugges">
+                    <a href="#" class="profile">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSi_guXp3VdsedwmecUjqvEmZEJ8B1Kp2RdlA&s"
+                            alt="">
+                    </a>
+                    <a href="#" class="name-account">
+                        <span class="name">Name1</span>
+                    </a>
+                    <a class="follow" href="#">Follow</a>
+                </div>
+                <div class="sugges">
+                    <a href="#" class="profile">
+                        <img src="https://i.pinimg.com/236x/9d/d4/52/9dd45271b020a094a12bfeee12b39f65.jpg" alt="">
+                    </a>
+                    <a href="#" class="name-account">
+                        <span class="name">Name2</span>
+                    </a>
+                    <a class="follow" href="#">Follow</a>
+                </div>
+                <div class="sugges">
+                    <a href="#" class="profile">
+                        <img src="https://i.pinimg.com/474x/67/21/87/67218742594adc43d081f81ad44a5b8a.jpg" alt="">
+                    </a>
+                    <a href="#" class="name-account">
+                        <span class="name">Name3</span>
+                    </a>
+                    <a class="follow" href="#">Follow</a>
+                </div>
+                <div class="sugges">
+                    <a href="#" class="profile">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSi_guXp3VdsedwmecUjqvEmZEJ8B1Kp2RdlA&s"
+                            alt="">
+                    </a>
+                    <a href="#" class="name-account">
+                        <span class="name">Name4</span>
+                    </a>
+                    <a class="follow" href="#">Follow</a>
+                </div>
+                <div class="sugges">
+                    <a href="#" class="profile">
+                        <img src="https://i.pinimg.com/474x/11/1d/e4/111de453a66d60dba2cbd1e297c0dd28.jpg" alt="">
+                    </a>
+                    <a href="#" class="name-account">
+                        <span class="name">Name5</span>
+                    </a>
+                    <a class="follow" href="#">Follow</a>
+                </div>
+                <div class="sugges">
+                    <a href="#" class="profile">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSi_guXp3VdsedwmecUjqvEmZEJ8B1Kp2RdlA&s"
+                            alt="">
+                    </a>
+                    <a href="#" class="name-account">
+                        <span class="name">Name6</span>
+                    </a>
+                    <a class="follow" href="#">Follow</a>
+                </div>
+                <div class="sugges">
+                    <a href="#" class="profile">
+                        <img src="https://i.pinimg.com/236x/ae/38/a3/ae38a31c7882298f4a35add547190460.jpg" alt="">
+                    </a>
+                    <a href="#" class="name-account">
+                        <span class="name">Name7</span>
+                    </a>
+                    <a class="follow" href="#">Follow</a>
+                </div>
+                <div class="sugges">
+                    <a href="#" class="profile">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSi_guXp3VdsedwmecUjqvEmZEJ8B1Kp2RdlA&s"
+                            alt="">
+                    </a>
+                    <a href="#" class="name-account">
+                        <span class="name">Name8</span>
+                    </a>
+                    <a class="follow" href="#">Follow</a>
+                </div>
+                <div class="sugges">
+                    <a href="#" class="profile">
+                        <img src="https://i.pinimg.com/474x/e5/07/99/e50799dcdb80bf3449b81005c01a6093.jpg" alt="">
+                    </a>
+                    <a href="#" class="name-account">
+                        <span class="name">Name9</span>
+                    </a>
+                    <a class="follow" href="#">Follow</a>
+                </div>
+                <!-- end đề xuất kết bạn -->
+            </div>
+        </div>
+        <!-- end suggested -->
+    </div>
+    <!-- end main -->
+
+
+    <script src="home.js"></script>
+    <script src="loading.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Drug Connect</title>
+    <!-- <link rel="stylesheet" href="loading.css">
+    <link rel="stylesheet" href="loading.js"> -->
+    <link rel="stylesheet" href="profile.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+        integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+
+<body>
+    <!-- start loading -->
+    <div class="preloader">
+        <div class="loader">
+            <span class="item"></span>
+            <span class="item"></span>
+            <span class="item"></span>
+            <span class="item"></span>
+        </div>
+    </div>
+    <div class="layer"></div>
+    <!-- end loading -->
+    <!-- start menu -->
+    <div class="menu">
+        <div class="logo">
+            <a href="home.html">DrugConnection</a>
+        </div>
+        <ul class="home_selection">
+            <a href="home.html">
+                <li class="home_selection-item">
+                    <i class="fas fa-home"></i>
+                    <span>Home</span>
+                </li>
+            </a>
+            <!-- <a href="#">
+                    <li>
+                        <i class="" aria-hidden="true"></i>
+                        <span>Search</span>
+                    </li>
+                </a> -->
+            <a href="#">
+                <li class="home_selection-item">
+                    <i class="fas fa-envelope"></i>
+                    <span>Messages</span>
+                </li>
+            </a>
+            <a href="#" id="dot-red">
+                <li class="home_selection-item">
+                    <div class="dot-red"></div>
+                    <i class="fas fa-bell"></i>
+                    <span>Notifications</span>
+                </li>
+            </a>
+            <a href="#">
+                <li class="home_selection-item">
+                    <i class="fas fa-plus-circle  "></i>
+                    <span>Create</span>
+                </li>
+            </a>
+            <a href="#">
+                <li class="home_selection-item">
+                    <img src="https://i.pinimg.com/236x/9d/4a/49/9d4a49b2b2b9392d3f844c4dbcff52d6.jpg" alt="">
+                    <span>Profile</span>
+                </li>
+            </a>
+            <a href="#">
+                <li class="home_selection-item">
+                    <i class="fas fa-bars"></i>
+                    <span>More</span>
+                </li>
+            </a>
+        </ul>
+    </div>
+    <!-- end menu -->
+
+    <div class="profile_main">
+        <div class="profile_header">
+            <div class="profile_header-avatar">
+                <img src="https://i.pinimg.com/236x/9d/4a/49/9d4a49b2b2b9392d3f844c4dbcff52d6.jpg" alt=""
+                    class="profile_avatar-img">
+            </div>
+            <div class="profile_header-info">
+                <div class="profile_header-info-top">
+                    <span class="profile-userfile ">Username</span>
+                    <div class="header_edit-container">
+                        <a href="#" class="header_edit-profile ">
+                            Edit profile</a>
+                    </div>
+                </div>
+                <ul class="profile_header-info-bot">
+                    <li class="info_bot-item">
+                        <span class="number_info">0</span>
+                        <span class="text_info">post</span>
+                    </li>
+                    <li class="info_bot-item profile_pointer">
+                        <span class="number_info">0</span>
+                        <span class="text_info">folowers</span>
+                    </li>
+                    <li class="info_bot-item profile_pointer">
+                        <span class="number_info">0</span>
+                        <span class="text_info">folowing</span>
+                    </li>
+                </ul>
+
+            </div>
+        </div>
+        <!-- body_post -->
+        <div class="profile_body">
+            <div class="profile_title">
+                <div class="profile_title-text">
+                    <i class='bx bx-grid'></i>
+                    <span>POST</span>
+                </div>
+            </div>
+            <ul class="profile_body-contain">
+                <li class="profile_post-item">
+                    <img src="https://i.pinimg.com/236x/9d/4a/49/9d4a49b2b2b9392d3f844c4dbcff52d6.jpg" alt=""
+                        class="post_item-img">
+                    <div class="post_react">
+                        <span><i class='bx bxs-heart'></i> 0 likes</span>
+                        <span> <i class='bx bxs-message-dots'></i></i> 0 comment</span>
+                    </div>
+                </li>
+                <li class="profile_post-item">
+                    <img src="https://i.pinimg.com/236x/9d/4a/49/9d4a49b2b2b9392d3f844c4dbcff52d6.jpg" alt=""
+                        class="post_item-img">
+                    <div class="post_react">
+                        <span><i class='bx bxs-heart'></i> 0 likes</span>
+                        <span> <i class='bx bxs-message-dots'></i></i> 0 comment</span>
+                    </div>
+                </li>
+                <li class="profile_post-item">
+                    <img src="https://i.pinimg.com/236x/9d/4a/49/9d4a49b2b2b9392d3f844c4dbcff52d6.jpg" alt=""
+                        class="post_item-img">
+                    <div class="post_react">
+                        <span><i class='bx bxs-heart'></i> 0 likes</span>
+                        <span> <i class='bx bxs-message-dots'></i></i> 0 comment</span>
+                    </div>
+                </li>
+                <li class="profile_post-item">
+                    <img src="https://i.pinimg.com/236x/9d/4a/49/9d4a49b2b2b9392d3f844c4dbcff52d6.jpg" alt=""
+                        class="post_item-img">
+                    <div class="post_react">
+                        <span><i class='bx bxs-heart'></i> 0 likes</span>
+                        <span> <i class='bx bxs-message-dots'></i></i> 0 comment</span>
+                    </div>
+                </li>
+                <li class="profile_post-item">
+                    <img src="https://i.pinimg.com/236x/9d/4a/49/9d4a49b2b2b9392d3f844c4dbcff52d6.jpg" alt=""
+                        class="post_item-img">
+                    <div class="post_react">
+                        <span><i class='bx bxs-heart'></i> 0 likes</span>
+                        <span> <i class='bx bxs-message-dots'></i></i> 0 comment</span>
+                    </div>
+                </li>
+                <li class="profile_post-item">
+                    <img src="https://i.pinimg.com/236x/9d/4a/49/9d4a49b2b2b9392d3f844c4dbcff52d6.jpg" alt=""
+                        class="post_item-img">
+                    <div class="post_react">
+                        <span><i class='bx bxs-heart'></i> 0 likes</span>
+                        <span> <i class='bx bxs-message-dots'></i></i> 0 comment</span>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+</body>
+
+</html>
