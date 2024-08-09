@@ -110,3 +110,72 @@ addCommentButton.addEventListener('click', () => {
     }
   });
 });
+// start modal
+// Thêm sự kiện click cho nút "Create"
+document.getElementById('create').addEventListener('click', function () {
+  const scrollTop = window.scrollY;
+  const scrollLeft = window.scrollX;
+  const modalTop = scrollTop + (window.innerHeight / 2);
+  const modalLeft = scrollLeft + (window.innerWidth / 2);
+
+  document.querySelector('.modal1').style.top = `${modalTop}px`;
+  document.querySelector('.modal1').style.left = `${modalLeft}px`;
+
+  document.querySelector('.layer1').classList.add('active');
+  document.querySelector('.layer1').style.display = 'block';
+  document.querySelector('.modal1').classList.add('active');
+  document.body.style.overflow = 'hidden';
+});
+
+// Thêm sự kiện click cho nút "Close"
+document.getElementById('close-button').addEventListener('click', function () {
+  document.querySelector('.layer1').classList.remove('active');
+  document.querySelector('.layer1').style.display = 'none';
+  document.querySelector('.modal1').classList.remove('active');
+  document.body.style.overflow = 'auto';
+});
+
+// Tùy chọn: Đóng modal khi click vào layer1
+document.querySelector('.layer1').addEventListener('click', function () {
+  document.querySelector('.layer1').classList.remove('active');
+  document.querySelector('.layer1').style.display = 'none';
+  document.querySelector('.modal1').classList.remove('active');
+  document.body.style.overflow = 'auto';
+});
+
+// đăng ảnh
+const fileInput = document.getElementById('file');
+const upImgDiv = document.querySelector('.up-img');
+const uploadButton = document.getElementById('upload-button');
+
+fileInput.addEventListener('change', (e) => {
+  const file = e.target.files[0];
+  const reader = new FileReader();
+
+  reader.onload = (event) => {
+    const img = document.createElement('img');
+    img.src = event.target.result;
+    upImgDiv.innerHTML = '';
+    upImgDiv.appendChild(img);
+    uploadButton.style.display = 'block';
+  };
+
+  reader.readAsDataURL(file);
+});
+
+// đang mở modal không cuộn bài viết
+
+document.getElementById('option-post').addEventListener('click', function() {
+  document.querySelector('.layer1').style.display = 'block';
+  document.querySelector('.modal2').style.display = 'block';
+});
+
+document.querySelector('.cancle').addEventListener('click', function() {
+  document.querySelector('.layer1').style.display = 'none';
+  document.querySelector('.modal2').style.display = 'none';
+});
+
+document.querySelector('.layer1').addEventListener('click', function() {
+  document.querySelector('.layer1').style.display = 'none';
+  document.querySelector('.modal2').style.display = 'none';
+});

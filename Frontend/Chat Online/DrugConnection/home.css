@@ -14,6 +14,7 @@
 
 body {
     position: relative;
+    width: 100%;
     height: 100vh;
     font-family: var(--font_text);
     display: flex;
@@ -30,7 +31,7 @@ body {
     width: 250px;
     height: 100%;
     border-right: 1px solid rgba(88, 88, 88, 0.582);
-    z-index: 10;
+    z-index: 2;
 }
 
 .menu .logo {
@@ -63,6 +64,7 @@ ul a {
 }
 
 ul li {
+    cursor: pointer;
     position: relative;
     font-size: 18px;
     height: 50px;
@@ -156,14 +158,15 @@ ul li img {
 
 .post-user1 .in4 {
     gap: 20px;
-    padding: 15px 10px 10px;
+    padding: 15px 2px 12px 8px;
     display: flex;
     align-items: center;
+    /* border: 1px solid black; */
 }
 
 .post-user1 .in4 .avatar {
-    width: 42px;
-    height: 42px;
+    width: 67px;
+    height: 40px;
     border-radius: 50%;
 }
 
@@ -172,7 +175,7 @@ ul li img {
 }
 
 .post-user1 .in4 .time {
-    margin-left: 10px;
+    margin-left: 8px;
     font-size: 13px;
     font-weight: bold;
     color: gray;
@@ -186,9 +189,21 @@ ul li img {
     border-radius: 50%;
     background-color: gray;
     position: absolute;
-    left: -14px;
+    left: -18px;
     top: 50%;
     transform: translateY(-50%);
+}
+
+.post-user1 .in4 .more-option {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: flex-end;
+    align-self: center;
+}
+
+.more-option .three-dots {
+    cursor: pointer;
 }
 
 .post-user1 .posts {
@@ -210,6 +225,7 @@ ul li img {
     gap: 12px;
     border-bottom: 1px solid rgba(128, 128, 128, 0.829);
 }
+
 /* start tym */
 
 .heart-container {
@@ -225,7 +241,7 @@ ul li img {
     width: 100%;
     height: 100%;
     opacity: 0;
-    z-index: 20;
+    z-index: 5;
     cursor: pointer;
 }
 
@@ -305,7 +321,7 @@ ul li img {
     width: 100%;
     height: fit-content;
     background-color: white;
-    
+
     border-radius: 17px 17px 27px 27px;
 }
 
@@ -340,8 +356,7 @@ ul li img {
     overflow: hidden;
 }
 
-.comments:hover
-{
+.comments:hover {
     overflow-y: scroll;
 }
 
@@ -486,9 +501,11 @@ ul li img {
     display: flex;
     border-radius: 10px;
     background-color: #dbdada69;
-    word-wrap: break-word; /* Tự động xuống dòng khi từ dài quá */
-    word-break: break-all; /* Chia từ ở bất kỳ đâu khi không đủ chỗ */
-    
+    word-wrap: break-word;
+    /* Tự động xuống dòng khi từ dài quá */
+    word-break: break-all;
+    /* Chia từ ở bất kỳ đâu khi không đủ chỗ */
+
 }
 
 .comment-container .comment-content {
@@ -527,8 +544,8 @@ ul li img {
     caret-color: #0aff33;
     overflow-y: hidden;
 }
-.text-box textarea:hover
-{
+
+.text-box textarea:hover {
     overflow-y: scroll;
 }
 
@@ -549,6 +566,7 @@ ul li img {
     background-color: transparent;
     /* set màu sắc của đường ray cuộn */
 }
+
 .text-box .formatting {
     display: grid;
     grid-template-columns: auto auto auto auto auto 1fr;
@@ -710,4 +728,185 @@ ul li img {
 .suggested .bottom .follow:hover {
     color: rgba(187, 4, 4, 0.932);
 }
+
 /* end suggested */
+
+.layer1 {
+    z-index: 10;
+    opacity: 60%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(5, 5, 5, 0.658);
+}
+
+
+.layer1,
+.modal1 {
+    display: none;
+    /* Ẩn layer1 và modal1 */
+}
+
+.layer1.active,
+.modal1.active {
+    display: block;
+    /* Hiển thị layer1 và modal1 khi có lớp active */
+}
+
+/* Modal 1 styles */
+.modal1 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 11;
+}
+
+/* Modal create styles */
+.modal-create {
+    font-family: var(--font_text);
+    background-color: rgb(255, 255, 255);
+    border-radius: 1em;
+    color: rgb(15, 14, 14);
+    max-width: 480px;
+    max-height: 500px;
+    overflow: hidden;
+}
+
+.content>*,
+.modal-create>* {
+    padding: 0.875em;
+}
+
+.content .title {
+    font-size: 1.25em;
+    font-weight: 600;
+    line-height: 1.2;
+    display: flex;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.content .message {
+    line-height: 1.2;
+    text-align: center;
+}
+
+.content .actions {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.actions .upload-btn {
+    background-color: transparent;
+    border: 0.125rem dashed hsla(223, 10%, 50%, 0.4);
+    flex: 1;
+    padding: 0.375rem 2rem;
+    cursor: pointer;
+}
+
+.actions .upload-btn:hover {
+    background-color: hsla(223, 10%, 60%, 0.2);
+}
+
+.actions button {
+    padding: 9px;
+    margin-left: 20px;
+    border: 1px solid;
+    border: none;
+    background-color: var(--clr);
+    border-radius: 50%;
+    color: white;
+}
+
+.actions button:hover {
+    background-color: var(--clr-hv);
+}
+
+.close {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(226, 94, 54);
+    height: 25px;
+    width: 25px;
+    border-radius: 50%;
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    color: #fff;
+    font-weight: bold;
+    cursor: pointer;
+    z-index: 1;
+}
+
+.close:hover {
+    background-color: rgb(255, 38, 0);
+}
+
+/* Uploaded image styles */
+.up-img {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    /* adjust the height according to your needs */
+    border: 1px solid #ddd;
+    /* optional border */
+    border-radius: 0.5em;
+    /* optional border radius */
+}
+
+.up-img img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+    /* keep the image aspect ratio */
+    margin: auto;
+    /* center the image horizontally and vertically */
+}
+/* start modal option post */
+.layer1,
+.modal2 {
+    display: none;
+    /* Ẩn layer1 và modal1 */
+}
+
+.layer1.active,
+.modal2.active {
+    display: block;
+    /* Hiển thị layer1 và modal1 khi có lớp active */
+}
+
+.modal2 {
+    z-index: 11;
+    position: absolute;
+    top: 200px;
+}
+.content1>*
+{
+    cursor: pointer;
+    padding: 15px 100px;
+    font-size: 17px;
+}
+
+.content1 .detele:active,
+.content1 .cancle:active
+{
+    background-color: rgb(240, 240, 240);
+    opacity: 0.2;
+}
+.modal-option-post {
+    font-family: var(--font_text);
+    background-color: rgb(255, 255, 255);
+    border-radius: 1em;
+    color: rgb(15, 14, 14);
+    overflow: hidden;
+}
+
+/* end modal option post */

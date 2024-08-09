@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -55,24 +56,21 @@
                     <span>Notifications</span>
                 </li>
             </a>
-            <a href="#">
-                <li>
-                    <i class="fas fa-plus-circle  "></i>
-                    <span>Create</span>
-                </li>
-            </a>
-            <a href="profile.html">
+            <li id="create">
+                <i class="fas fa-plus-circle  "></i>
+                <span>Create</span>
+            </li>
+            <a href="profilee.html">
                 <li>
                     <img src="https://i.pinimg.com/236x/9d/4a/49/9d4a49b2b2b9392d3f844c4dbcff52d6.jpg" alt="">
                     <span>Profile</span>
                 </li>
             </a>
-            <a href="#">
-                <li>
-                    <i class="fas fa-bars"></i>
-                    <span>More</span>
-                </li>
-            </a>
+            <div style="width: 100%; position: absolute;bottom: 0; padding: 10px 0; display: flex; justify-content: center; border-top: 1px solid black;">
+                <a href="LogDrug.html">
+                    <span style="color: red;">Log out</span>
+                </a>
+            </div>
         </ul>
     </div>
     <!-- end menu -->
@@ -106,11 +104,20 @@
             <div class="post-user">
                 <div class="post-user1">
                     <div class="in4">
-                        <a href="#"><img class="avatar"
+                        <a href="profile.html"><img class="avatar"
                                 src="https://i.pinimg.com/236x/9d/4a/49/9d4a49b2b2b9392d3f844c4dbcff52d6.jpg"
                                 alt=""></a>
-                        <a href="#"><span class="name">hl_btoan</span></a>
+                        <a href="profile.html"><span class="name">_hlbt248_</span></a>
                         <span class="time">1d</span>
+                        <div class="more-option">
+                            <svg id="option-post" aria-label="More options" class="three-dots" fill="currentColor"
+                                height="24" role="img" viewBox="0 0 24 24" width="24">
+                                <title>More options</title>
+                                <circle cx="12" cy="12" r="1.5"></circle>
+                                <circle cx="6" cy="12" r="1.5"></circle>
+                                <circle cx="18" cy="12" r="1.5"></circle>
+                            </svg>
+                        </div>
                     </div>
                     <div class="posts">
                         <img src="https://i.pinimg.com/236x/11/6d/99/116d99c44902e7003a1f6731cb93d99d.jpg" alt="">
@@ -187,7 +194,7 @@
                     <!-- end comment -->
                 </div>
             </div>
-            
+
 
         </div>
         <!-- end post -->
@@ -195,12 +202,12 @@
         <!-- start suggested -->
         <div class="suggested">
             <div class="top">
-                <a class="profile" href="#">
+                <a class="profile" href="profile.html">
                     <img class="profile" src="https://i.pinimg.com/236x/9d/4a/49/9d4a49b2b2b9392d3f844c4dbcff52d6.jpg"
                         alt="">
                 </a>
-                <a class="name-account" href="#">
-                    <span class="name">hl_btoan</span>
+                <a class="name-account" href="profile.html">
+                    <span class="name">_hlbt248_</span>
                 </a>
                 <a class="switch" href="LogDrug.html">Switch</a>
             </div>
@@ -298,8 +305,35 @@
         <!-- end suggested -->
     </div>
     <!-- end main -->
-
-
+    <div class="layer1"></div>
+    <!-- start modal create -->
+    <div class="modal1">
+        <form class="modal-create">
+            <span class="close" id="close-button">X</span>
+            <div class="content">
+                <span class="title">Create new post</span>
+                <div class="actions">
+                    <label for="file" class="upload-btn">Select from computer
+                        <input hidden="" type="file" id="file">
+                    </label>
+                    <button id="upload-button" style="display: none;">Up load</button>
+                </div>
+                <!-- anh hiện đây khi chọn -->
+                <div class="up-img"></div>
+            </div>
+        </form>
+    </div>
+    <!-- end modal create -->
+    <!-- start modal option post -->
+    <div class="modal2">
+        <form class="modal-option-post">
+            <div class="content1">
+                <div class="detele" style="color: red; border-bottom: 1px solid black;">Detele</div>
+                <div class="cancle">Cancle</div>
+            </div>
+        </form>
+    </div>
+    <!-- end modal option post -->
     <script src="home.js"></script>
     <script src="loading.js"></script>
 </body>

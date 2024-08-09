@@ -7,24 +7,16 @@
     <title>Drug Connect</title>
     <!-- <link rel="stylesheet" href="loading.css">
     <link rel="stylesheet" href="loading.js"> -->
-    <link rel="stylesheet" href="profile.css">
+    <link rel="stylesheet" href="profilee.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
         integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="shortcut icon" href="logo.jpg" type="image/x-icon">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 </head>
 
 <body>
-    <!-- start loading -->
-    <div class="preloader">
-        <div class="loader">
-            <span class="item"></span>
-            <span class="item"></span>
-            <span class="item"></span>
-            <span class="item"></span>
-        </div>
-    </div>
-    <div class="layer"></div>
+    <!-- <div class="layer"></div> -->
     <!-- end loading -->
     <!-- start menu -->
     <div class="menu">
@@ -57,28 +49,25 @@
                     <span>Notifications</span>
                 </li>
             </a>
-            <a href="#">
-                <li class="home_selection-item">
-                    <i class="fas fa-plus-circle  "></i>
-                    <span>Create</span>
-                </li>
-            </a>
-            <a href="#">
+            <li style="cursor: pointer;" class="home_selection-item" id="create">
+                <i class="fas fa-plus-circle  "></i>
+                <span>Create</span>
+            </li>
+            <a href="profilee.html">
                 <li class="home_selection-item">
                     <img src="https://i.pinimg.com/236x/9d/4a/49/9d4a49b2b2b9392d3f844c4dbcff52d6.jpg" alt="">
                     <span>Profile</span>
                 </li>
             </a>
-            <a href="#">
-                <li class="home_selection-item">
-                    <i class="fas fa-bars"></i>
-                    <span>More</span>
-                </li>
-            </a>
+            <div style="width: 100%; position: absolute;bottom: 0; padding: 10px 0; display: flex; justify-content: center; border-top: 1px solid black;">
+                <a href="LogDrug.html">
+                    <span style="color: red;">Log out</span>
+                </a>
+            </div>
         </ul>
     </div>
     <!-- end menu -->
-
+    <!-- .start profile -->
     <div class="profile_main">
         <div class="profile_header">
             <div class="profile_header-avatar">
@@ -91,6 +80,13 @@
                     <div class="header_edit-container">
                         <a href="#" class="header_edit-profile ">
                             Edit profile</a>
+                    </div>
+                    <div class="header_edit-container follow-btn" onclick="toggleFollow(this)">
+                        <span class="header_edit-profile" id="follow-text">Follow</span>
+                    </div>
+                    <div class="header_edit-container message-btn">
+                        <a href="#" class="header_edit-profile ">
+                            Message</a>
                     </div>
                 </div>
                 <ul class="profile_header-info-bot">
@@ -107,7 +103,8 @@
                         <span class="text_info">folowing</span>
                     </li>
                 </ul>
-
+                <!-- bio_profile -->
+                <div class="profile_bio">Bio_here</div>
             </div>
         </div>
         <!-- body_post -->
@@ -170,7 +167,79 @@
             </ul>
         </div>
     </div>
+    <!-- end profile main -->
 
+    <!-- modal for edit-profile-btn -->
+    <div class="modal">
+        <div class="modal_container">
+            <div class="modal_header">
+                <h3 class="modal_header-text">Edit profile</h3>
+            </div>
+            <div class="modal_body">
+                <!-- change photo -->
+                <div class="change_photo">
+                    <img src="https://i.pinimg.com/236x/9d/4a/49/9d4a49b2b2b9392d3f844c4dbcff52d6.jpg" alt=""
+                        class="profile_avatar-img img_size-s">
+                    <span class="modal_username ">Username</span>
+                    <div for="file" class="upload-btn change_photo-btn ">Change photo
+                        <input hidden="" type="file" id="file">
+                    </div>
+                </div>
+
+                <!-- upload_img-avatar -->
+                <div class="bo">
+                    <div class="profile_edit-upload">
+                        <div class="img-circle">
+                            <img src="" alt="">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- edit bio -->
+                <div class="edit_bio">
+                    <h4 class="edit_bio-header">Edit name</h4>
+                    <input type="text" class="name-edit_input" placeholder="Enter your new name">
+                </div>
+                <div class="edit_bio">
+                    <h4 class="edit_bio-header">Edit bio</h4>
+                    <input type="text" class="bio-edit_input" placeholder="Enter your bio">
+                </div>
+            </div>
+            <!-- footer modal -->
+            <div class="modal_footer">
+                <button type="reject" class="modal_close-btn">
+                    <span>Cancle</span>
+                    <i class='bx bx-x'></i>
+                </button>
+                <button type="submit" class="modal_save-btn">
+                    <span>SAVE</span>
+                    <i class='bx bx-check'></i>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <div class="layer1"></div>
+
+    <!-- start modal create -->
+    <div class="modal1">
+        <form class="modal-create">
+            <span class="close" id="close-button">X</span>
+            <div class="content">
+                <span class="title">Create new post</span>
+                <div class="actions">
+                    <label for="file" class="upload-btn">Select from computer
+                        <input hidden="" type="file" id="file">
+                    </label>
+                    <button id="upload-button" style="display: none;">Up load</button>
+                </div>
+                <!-- ảnh hiện đây khi chọn -->
+                <div class="up-img"></div>
+            </div>
+        </form>
+    </div>
+    <!-- end modal create -->
+    <script src="profilee.js"></script>
 </body>
 
 </html>
